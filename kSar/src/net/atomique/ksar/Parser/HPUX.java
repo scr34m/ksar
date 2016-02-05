@@ -8,8 +8,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import net.atomique.ksar.OSParser;
 import net.atomique.ksar.GlobalOptions;
 import net.atomique.ksar.Graph.Graph;

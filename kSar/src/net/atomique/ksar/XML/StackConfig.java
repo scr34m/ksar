@@ -53,9 +53,6 @@ public class StackConfig {
 
     public void setSize(String s) {
         Integer tmp = new Integer(s);
-        if (tmp == null) {
-            return;
-        }
         this.size = tmp.intValue();
     }
 

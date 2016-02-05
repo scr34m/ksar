@@ -6,8 +6,6 @@ package net.atomique.ksar.Parser;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import net.atomique.ksar.Config;
 import net.atomique.ksar.OSParser;
 import net.atomique.ksar.GlobalOptions;

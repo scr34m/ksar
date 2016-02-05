@@ -46,9 +46,6 @@ public class PlotConfig {
 
     public void setSize(String s) {
         Integer tmp = new Integer(s);
-        if (tmp == null) {
-            return;
-        }
         this.size = size;
     }
 

@@ -4,7 +4,6 @@
  */
 package net.atomique.ksar;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import net.atomique.ksar.XML.OSConfig;

@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TreeSet;
-import net.atomique.ksar.Parser.Linux;
 import net.atomique.ksar.XML.OSConfig;
 import org.jfree.data.time.Second;
 
