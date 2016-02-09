@@ -13,7 +13,7 @@ import javax.swing.tree.MutableTreeNode;
  *
  * @author Max
  */
-public class SortedTreeNode extends DefaultMutableTreeNode implements Comparable {
+public class SortedTreeNode extends DefaultMutableTreeNode implements Comparable<SortedTreeNode> {
 
     public static final long serialVersionUID = 15071L;
 
@@ -58,12 +58,13 @@ public class SortedTreeNode extends DefaultMutableTreeNode implements Comparable
         return leaf_num;
     }
     
+    @SuppressWarnings("unchecked")
     @Override
     public void insert(final MutableTreeNode newChild, final int childIndex) {
         super.insert(newChild, childIndex);
         Collections.sort(this.children);
     }
-    public int compareTo(final Object o) {
+    public int compareTo(final SortedTreeNode o) {
         return this.toString().compareToIgnoreCase(o.toString());
     }
 

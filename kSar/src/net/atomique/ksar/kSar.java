@@ -115,10 +115,10 @@ public class kSar {
 
                 String ParserType = columns[0];
                 try {
-                    Class classtmp = GlobalOptions.getParser(ParserType);
+                    Class<? extends AllParser> classtmp = GlobalOptions.getParser(ParserType);
                     if (classtmp != null) {
                         if (myparser == null) {
-                            myparser = (AllParser) classtmp.newInstance();
+                            myparser = classtmp.newInstance();
                             myparser.init(this, current_line);
 
                             continue;

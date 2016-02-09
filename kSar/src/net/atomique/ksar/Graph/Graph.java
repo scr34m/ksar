@@ -223,9 +223,10 @@ public class Graph {
         tmp.append(getCsvHeader());
         tmp.append("\n");
         TimeSeries datelist = (TimeSeries) Stats.get(0);
-        Iterator ite = datelist.getTimePeriods().iterator();
+        @SuppressWarnings("unchecked")
+        Iterator<TimePeriod> ite = datelist.getTimePeriods().iterator();
         while (ite.hasNext()) {
-            TimePeriod item = (TimePeriod) ite.next();
+            TimePeriod item = ite.next();
             tmp.append(item.toString());
             tmp.append(";");
             tmp.append(getCsvLine((RegularTimePeriod) item));
@@ -306,7 +307,7 @@ public class Graph {
         return printSelected;
     }
 
-    private XYDataset create_collection(ArrayList l) {
+    private XYDataset create_collection(ArrayList<String> l) {
         TimeSeriesCollection graphcollection = new TimeSeriesCollection();
         TimeSeries found = null;
         boolean hasdata = false;
