@@ -67,9 +67,9 @@ public abstract class AllParser {
         try {
             dateSimple1 = new SimpleDateFormat(dateFormat).parse(s);            
             cal.setTime(dateSimple1);
-            day=cal.get(cal.DAY_OF_MONTH);
-            month=cal.get(cal.MONTH)+1;
-            year=cal.get(cal.YEAR);
+            day=cal.get(Calendar.DAY_OF_MONTH);
+            month=cal.get(Calendar.MONTH)+1;
+            year=cal.get(Calendar.YEAR);
             dateSimple2 = new SimpleDateFormat(dateFormat).parse(sarStartDate);
             dateSimple3 = new SimpleDateFormat(dateFormat).parse(sarEndDate);
         } catch (ParseException e) {
